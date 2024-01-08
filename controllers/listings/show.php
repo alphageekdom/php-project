@@ -9,9 +9,9 @@ $params = [
     'id' => $id
 ];
 
-$listings = $db->query('SELECT * FROM listings WHERE id = :id', $params)->fetch();
+$listing = $db->query('SELECT * FROM listings WHERE id = :id', $params)->fetch();
 
 
 loadView("listings/show", [
-    "listings" => $listings
+    "listing" => $listing
 ]);
