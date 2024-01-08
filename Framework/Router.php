@@ -124,7 +124,6 @@ class Router {
                 }
             }
         }
-
         ErrorController::notFound();
     }
 }

@@ -35,7 +35,6 @@ class Validation {
 
     /**
      * Match a value against another
-     * 
      * @param string $value1
      * @param string $value2
      * @return bool
@@ -44,6 +43,6 @@ class Validation {
         $value1 = trim($value1);
         $value2 = trim($value2);
 
-        return ($value1 == $value2);
+        return $value1 === $value2;
     }
 }

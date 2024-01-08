@@ -8,7 +8,7 @@ class Database {
     public $conn;
 
     /**
-     * Constructor for Database Class
+     * Constructor for Database class
      * 
      * @param array $config
      */
@@ -17,7 +17,7 @@ class Database {
 
         $options = [
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ,
+            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ
         ];
 
         try {
@@ -31,6 +31,7 @@ class Database {
      * Query the database
      * 
      * @param string $query
+     * 
      * @return PDOStatement
      * @throws PDOException
      */
