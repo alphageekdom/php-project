@@ -1,0 +1,16 @@
+{
+  "name": "alphageekdom/php-project",
+  "description": "Job listing application",
+  "authors": [
+    {
+      "name": "Luis Soto",
+      "email": "alphageekdom@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Framework\\": "Framework/",
+      "App\\": "App/"
+    }
+  }
+}
