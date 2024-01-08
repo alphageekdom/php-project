@@ -10,7 +10,7 @@ class Session {
      * @return void
      */
     public static function start() {
-        if (session_status() === PHP_SESSION_ACTIVE) {
+        if (session_status() == PHP_SESSION_NONE) {
             session_start();
         }
     }
@@ -47,7 +47,7 @@ class Session {
         return isset($_SESSION[$key]);
     }
 
-    /**
+    /** 
      * Clear session by key
      * 
      * @param string $key

@@ -53,16 +53,15 @@ class UserController {
         }
 
         if (!Validation::string($name, 2, 50)) {
-            $errors['name'] = 'Name must be between 2 to 50 characters';
+            $errors['name'] = 'Name must be between 2 and 50 characters';
         }
 
         if (!Validation::string($password, 6, 50)) {
-            $errors['password'] = 'Password must be between 6 characters';
+            $errors['password'] = 'Password must be at least 6 characters';
         }
 
-
         if (!Validation::match($password, $passwordConfirmation)) {
-            $errors['password_confirmation'] = 'Passwords do no match';
+            $errors['password_confirmation'] = 'Passwords do not match';
         }
 
         if (!empty($errors)) {
@@ -72,7 +71,7 @@ class UserController {
                     'name' => $name,
                     'email' => $email,
                     'city' => $city,
-                    'state' => $state
+                    'state' => $state,
                 ]
             ]);
             exit;
@@ -80,7 +79,7 @@ class UserController {
 
         // Check if email exists
         $params = [
-            'email' => $email,
+            'email' => $email
         ];
 
         $user = $this->db->query('SELECT * FROM users WHERE email = :email', $params)->fetch();
@@ -99,14 +98,15 @@ class UserController {
             'email' => $email,
             'city' => $city,
             'state' => $state,
-            'password' => password_hash($password, PASSWORD_DEFAULT),
+            'password' => password_hash($password, PASSWORD_DEFAULT)
         ];
 
         $this->db->query('INSERT INTO users (name, email, city, state, password) VALUES (:name, :email, :city, :state, :password)', $params);
 
-        // Get the new user id
+        // Get new user ID
         $userId = $this->db->conn->lastInsertId();
 
+        // Set user session
         Session::set('user', [
             'id' => $userId,
             'name' => $name,
