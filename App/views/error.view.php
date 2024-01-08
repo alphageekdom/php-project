@@ -7,8 +7,9 @@
         <p class="text-center text-2xl mb-4">
             <?= $message ?>
         </p>
+        <a href="/listings" class="block text-center">Go Back To Listings</a>
     </div>
 </section>
 
 
-<?php loadPartial('footer') ?>
+<!-- <?php loadPartial('footer') ?> -->

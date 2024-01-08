@@ -19,12 +19,12 @@ class ErrorController {
     }
 
     /**
-     * 4044 unauthorized error
+     * 403 unauthorized error
      * 
      * @return void
      */
     public static function unauthorized($message = 'You are not authorized to view this message') {
-        http_response_code(404);
+        http_response_code(403);
         loadView("error", [
             "status" => '403',
             'message' => $message
