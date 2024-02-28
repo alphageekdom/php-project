@@ -4,7 +4,7 @@
 <?php loadPartial('top-banner') ?>
 
 <section class="container mx-auto p-4 mt-4">
-    <div class="rounded-lg shadow-md bg-white p-3">
+    <div class="rounded-lg shadow-xl bg-white p-3">
         <?= loadPartial('message') ?>
         <div class="flex justify-between items-center">
             <a class="block p-4 text-blue-700" href="/listings">
@@ -46,7 +46,7 @@
 
 <section class="container mx-auto p-4">
     <h2 class="text-xl font-semibold mb-4">Job Details</h2>
-    <div class="rounded-lg shadow-md bg-white p-4">
+    <div class="rounded-lg shadow-xl bg-white p-4">
         <h3 class="text-lg font-semibold mb-2 text-blue-500">
             Job Requirements
         </h3>
@@ -60,7 +60,7 @@
         Put "Job Application" as the subject of your email and attach your
         resume.
     </p>
-    <a href="mailto:<?= $listing->email ?>" class="block w-full text-center px-5 py-2.5 shadow-sm rounded border text-base font-medium cursor-pointer text-indigo-700 bg-indigo-100 hover:bg-indigo-200">
+    <a href="mailto:<?= $listing->email ?>" class="block w-full text-center px-5 py-2.5 shadow-xl rounded border text-base font-medium cursor-pointer text-indigo-700 bg-indigo-100 hover:bg-indigo-200">
         Apply Now
     </a>
 </section>
