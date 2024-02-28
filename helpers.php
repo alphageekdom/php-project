@@ -80,7 +80,7 @@ function formatSalary($salary) {
 }
 
 /**
- * Sanitize Daa
+ * Sanitize Data
  * 
  * @param string $dirty
  * @return string
