@@ -7,7 +7,7 @@
     <div class="rounded-lg shadow-xl bg-white p-3">
         <?= loadPartial('message') ?>
         <div class="flex justify-between items-center">
-            <a class="block p-4 text-blue-700" href="/listings">
+            <a class="block p-4 text-blue-900" href="/listings">
                 <i class="fa fa-arrow-alt-circle-left"></i>
                 Back To Listings
             </a>
@@ -47,13 +47,13 @@
 <section class="container mx-auto p-4">
     <h2 class="text-xl font-semibold mb-4">Job Details</h2>
     <div class="rounded-lg shadow-xl bg-white p-4">
-        <h3 class="text-lg font-semibold mb-2 text-blue-500">
+        <h3 class="text-lg font-semibold mb-2 text-blue-900">
             Job Requirements
         </h3>
         <p>
             <?= $listing->requirements ?>
         </p>
-        <h3 class="text-lg font-semibold mt-4 mb-2 text-blue-500">Benefits</h3>
+        <h3 class="text-lg font-semibold mt-4 mb-2 text-blue-900">Benefits</h3>
         <p><?= $listing->benefits ?></p>
     </div>
     <p class="my-5">
