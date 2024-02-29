@@ -6,7 +6,7 @@
         <form method="GET" action="/listings/search" class="mb-4 block mx-5 md:mx-auto">
             <input type="text" name="keywords" placeholder="Keywords" class="w-full md:w-auto mb-2 px-4 py-2 focus:outline-none" />
             <input type="text" name="location" placeholder="Location" class="w-full md:w-auto mb-2 px-4 py-2 focus:outline-none" />
-            <button class="w-full md:w-auto bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 focus:outline-none">
+            <button class="w-full md:w-auto bg-blue-800 hover:bg-blue-600 text-white px-4 py-2 focus:outline-none">
                 <i class="fa fa-search"></i> Search
             </button>
         </form>
