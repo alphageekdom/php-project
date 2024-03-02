@@ -11,4 +11,13 @@ document.addEventListener('DOMContentLoaded', function () {
       mobileMenu.classList.remove('show');
     }
   });
+
+  window.addEventListener('scroll', function () {
+    const header = document.querySelector('header');
+    if (window.scrollY > header.offsetTop) {
+      header.classList.add('sticky-nav');
+    } else {
+      header.classList.remove('sticky-nav');
+    }
+  });
 });
