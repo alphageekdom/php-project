@@ -1067,3 +1067,63 @@ video {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
+
+/* Mobile Navbar */
+
+#mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+#mobile-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+}
+
+.menu-link {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  #mobile-menu {
+    width: 100%;
+    display: none;
+    position: fixed;
+    --tw-bg-opacity: 1;
+    background: linear-gradient(
+      90deg,
+      rgba(14, 38, 69, var(--tw-bg-opacity)) 0%,
+      rgba(45, 75, 105, var(--tw-bg-opacity)) 50%,
+      rgba(79, 115, 145, var(--tw-bg-opacity)) 100%
+    );
+    top: 13%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the menu */
+    padding: 1rem;
+    z-index: 1000;
+  }
+
+  #mobile-menu-btn {
+    display: block;
+  }
+
+  #mobile-menu.show {
+    display: block;
+  }
+
+  #mobile-menu-close-btn {
+    display: none;
+  }
+
+  #mobile-menu.show #mobile-menu-close-btn {
+    display: block;
+  }
+}
