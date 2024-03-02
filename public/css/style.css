@@ -1104,7 +1104,7 @@ video {
       rgba(45, 75, 105, var(--tw-bg-opacity)) 50%,
       rgba(79, 115, 145, var(--tw-bg-opacity)) 100%
     );
-    top: 13%;
+    top: 12%;
     left: 50%;
     transform: translate(-50%, -50%); /* Center the menu */
     padding: 1rem;
